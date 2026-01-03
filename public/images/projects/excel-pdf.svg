@@ -1,0 +1,205 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1929;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a2332;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1b2a;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="coreGrad">
+      <stop offset="0%" style="stop-color:rgba(14, 165, 233, 0.3);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(6, 78, 115, 0.1);stop-opacity:1" />
+    </radialGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shadow filter -->
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGrad)"/>
+
+  <!-- Scanlines effect -->
+  <rect width="1200" height="800" fill="url(#scanlines)" opacity="0.03"/>
+
+  <!-- Particles -->
+  <circle cx="120" cy="160" r="3" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="240" cy="640" r="2" fill="#38bdf8" opacity="0.3"/>
+  <circle cx="480" cy="320" r="4" fill="#38bdf8" opacity="0.5"/>
+  <circle cx="720" cy="480" r="3" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="960" cy="240" r="2" fill="#38bdf8" opacity="0.3"/>
+  <circle cx="360" cy="560" r="3" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="840" cy="120" r="4" fill="#38bdf8" opacity="0.5"/>
+  <circle cx="180" cy="400" r="2" fill="#38bdf8" opacity="0.3"/>
+  <circle cx="1020" cy="560" r="3" fill="#38bdf8" opacity="0.4"/>
+  <circle cx="600" cy="80" r="4" fill="#38bdf8" opacity="0.5"/>
+
+  <!-- Network connection lines -->
+  <line x1="200" y1="150" x2="600" y2="400" stroke="rgba(56, 189, 248, 0.1)" stroke-width="1"/>
+  <line x1="1000" y1="200" x2="600" y2="400" stroke="rgba(56, 189, 248, 0.1)" stroke-width="1"/>
+  <line x1="300" y1="650" x2="600" y2="400" stroke="rgba(56, 189, 248, 0.1)" stroke-width="1"/>
+  <line x1="900" y1="600" x2="600" y2="400" stroke="rgba(56, 189, 248, 0.1)" stroke-width="1"/>
+
+  <!-- Tech corner decorations -->
+  <path d="M 40 40 L 40 140 M 40 40 L 140 40" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2" fill="none"/>
+  <path d="M 1160 40 L 1060 40 M 1160 40 L 1160 140" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2" fill="none"/>
+  <path d="M 40 760 L 40 660 M 40 760 L 140 760" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2" fill="none"/>
+  <path d="M 1160 760 L 1160 660 M 1160 760 L 1060 760" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2" fill="none"/>
+
+  <!-- Title -->
+  <text x="600" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="url(#titleGrad)" text-anchor="middle" letter-spacing="2" filter="url(#glow)">AUTOMATION</text>
+  <text x="600" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="#94a3b8" text-anchor="middle" letter-spacing="1">Excel to PDF Report Generation</text>
+
+  <!-- Central HUD System -->
+  <g transform="translate(600, 400)">
+
+    <!-- Outer rotating ring (dashed) -->
+    <circle cx="0" cy="0" r="190" fill="none" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2" stroke-dasharray="10 5" opacity="0.8"/>
+
+    <!-- Middle ring -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2" opacity="0.6"/>
+
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="130" fill="none" stroke="rgba(14, 165, 233, 0.4)" stroke-width="2" opacity="0.7"/>
+
+    <!-- Ring segments for tech look -->
+    <path d="M 0,-190 A 190,190 0 0,1 95,-164" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.8"/>
+    <path d="M -95,164 A 190,190 0 0,1 0,190" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.8"/>
+
+    <!-- Connection lines to orbital icons -->
+    <line x1="0" y1="-90" x2="0" y2="-235" stroke="#38bdf8" stroke-width="2" opacity="0.4" stroke-dasharray="5 5"/>
+    <line x1="90" y1="0" x2="235" y2="0" stroke="#38bdf8" stroke-width="2" opacity="0.4" stroke-dasharray="5 5"/>
+    <line x1="0" y1="90" x2="0" y2="235" stroke="#38bdf8" stroke-width="2" opacity="0.4" stroke-dasharray="5 5"/>
+    <line x1="-90" y1="0" x2="-235" y2="0" stroke="#38bdf8" stroke-width="2" opacity="0.4" stroke-dasharray="5 5"/>
+
+    <!-- Central core -->
+    <circle cx="0" cy="0" r="90" fill="url(#coreGrad)" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.6"/>
+
+    <!-- Gear icon in center -->
+    <g transform="scale(2.5)" opacity="0.9">
+      <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66z" fill="#38bdf8" filter="url(#glow)"/>
+    </g>
+
+    <!-- Orbital icons -->
+
+    <!-- Excel (Top) -->
+    <g transform="translate(0, -235)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="45" fill="rgba(15, 23, 42, 0.95)" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3" stroke-dashoffset="0">
+        <animate attributeName="stroke-dasharray" values="0 283; 283 0" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Excel grid icon -->
+      <rect x="-18" y="-15" width="12" height="10" fill="none" stroke="#1D6F42" stroke-width="2" rx="1"/>
+      <rect x="-3" y="-15" width="12" height="10" fill="none" stroke="#1D6F42" stroke-width="2" rx="1"/>
+      <rect x="12" y="-15" width="12" height="10" fill="none" stroke="#1D6F42" stroke-width="2" rx="1"/>
+      <rect x="-18" y="-2" width="12" height="10" fill="none" stroke="#1D6F42" stroke-width="2" rx="1"/>
+      <rect x="-3" y="-2" width="12" height="10" fill="none" stroke="#1D6F42" stroke-width="2" rx="1"/>
+      <rect x="12" y="-2" width="12" height="10" fill="none" stroke="#1D6F42" stroke-width="2" rx="1"/>
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">EXCEL</text>
+    </g>
+
+    <!-- Python (Right) -->
+    <g transform="translate(235, 0)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="45" fill="rgba(15, 23, 42, 0.95)" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3">
+        <animate attributeName="stroke-dasharray" values="0 283; 283 0" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Python/automation icon -->
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#3776ab" stroke-width="2"/>
+      <circle cx="0" cy="0" r="12" fill="none" stroke="#3776ab" stroke-width="2"/>
+      <circle cx="-7" cy="-7" r="3" fill="#FFD43B"/>
+      <circle cx="7" cy="7" r="3" fill="#3776ab"/>
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">PYTHON</text>
+    </g>
+
+    <!-- PDF (Bottom) -->
+    <g transform="translate(0, 235)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="45" fill="rgba(15, 23, 42, 0.95)" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3">
+        <animate attributeName="stroke-dasharray" values="0 283; 283 0" dur="2s" begin="2s" repeatCount="indefinite"/>
+      </circle>
+      <!-- PDF icon -->
+      <rect x="-12" y="-15" width="24" height="32" rx="2" fill="none" stroke="#DC3545" stroke-width="2"/>
+      <polyline points="-12,-15 -12,-3 0,-3" fill="none" stroke="#DC3545" stroke-width="2"/>
+      <line x1="-8" y1="2" x2="8" y2="2" stroke="#DC3545" stroke-width="2"/>
+      <line x1="-8" y1="8" x2="8" y2="8" stroke="#DC3545" stroke-width="2"/>
+      <line x1="-8" y1="14" x2="4" y2="14" stroke="#DC3545" stroke-width="2"/>
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">PDF</text>
+    </g>
+
+    <!-- RTL (Left) -->
+    <g transform="translate(-235, 0)" filter="url(#shadow)">
+      <circle cx="0" cy="0" r="45" fill="rgba(15, 23, 42, 0.95)" stroke="#38bdf8" stroke-width="2"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3">
+        <animate attributeName="stroke-dasharray" values="0 283; 283 0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <!-- RTL icon -->
+      <line x1="-15" y1="-8" x2="15" y2="-8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-15" y1="0" x2="15" y2="0" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-15" y1="8" x2="15" y2="8" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+      <polyline points="10,-15 15,-8 10,-1" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="0" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#38bdf8" text-anchor="middle">RTL</text>
+    </g>
+
+    <!-- Flow particles on connection lines -->
+    <circle cx="0" cy="-150" r="3" fill="#38bdf8" opacity="0.8">
+      <animate attributeName="cy" values="-90; -235" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 0.8; 0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="0" r="3" fill="#38bdf8" opacity="0.8">
+      <animate attributeName="cx" values="90; 235" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 0.8; 0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="150" r="3" fill="#38bdf8" opacity="0.8">
+      <animate attributeName="cy" values="90; 235" dur="2s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 0.8; 0" dur="2s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-150" cy="0" r="3" fill="#38bdf8" opacity="0.8">
+      <animate attributeName="cx" values="-90; -235" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0; 0.8; 0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Feature badges at bottom -->
+  <g transform="translate(600, 720)">
+    <g transform="translate(-250, 0)">
+      <rect x="-85" y="-18" width="170" height="36" rx="18" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1"/>
+      <text x="0" y="5" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Arabic Support</text>
+    </g>
+    <g transform="translate(0, 0)">
+      <rect x="-85" y="-18" width="170" height="36" rx="18" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1"/>
+      <text x="0" y="5" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">Data Cleansing</text>
+    </g>
+    <g transform="translate(250, 0)">
+      <rect x="-95" y="-18" width="190" height="36" rx="18" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(56, 189, 248, 0.5)" stroke-width="1"/>
+      <text x="0" y="5" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#38bdf8" text-anchor="middle" letter-spacing="0.5">75% Time Reduction</text>
+    </g>
+  </g>
+
+</svg>
