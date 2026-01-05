@@ -74,7 +74,7 @@ export function Header() {
                 size="sm"
                 className="ml-4"
               >
-                <a href="/resume.pdf" download>
+                <a href="/Talal_Alrasheed_SWE_KFUPM.pdf" download>
                   Download CV
                 </a>
               </Button>
@@ -119,7 +119,7 @@ export function Header() {
                 variant="default"
                 className="w-full"
               >
-                <a href="/resume.pdf" download>
+                <a href="/Talal_Alrasheed_SWE_KFUPM.pdf" download>
                   Download CV
                 </a>
               </Button>

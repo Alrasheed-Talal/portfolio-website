@@ -97,7 +97,7 @@ export function Hero() {
               asChild
               className="min-w-[160px]"
             >
-              <a href="/resume.pdf" download>
+              <a href="/Talal_Alrasheed_SWE_KFUPM.pdf" download>
                 Download CV
               </a>
             </Button>
