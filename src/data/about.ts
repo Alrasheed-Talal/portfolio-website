@@ -30,7 +30,7 @@ export const aboutData = {
     },
     {
       language: 'English',
-      proficiency: 'Advanced (TOEFL ITP: 473 - B1 Level)'
+      proficiency: 'Advanced'
     }
   ],
 
